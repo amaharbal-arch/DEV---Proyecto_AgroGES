@@ -1,0 +1,378 @@
+/* Estilos consolidados y ajustados a una paleta más profesional (Verde Bosque y Gris) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #E8F5E9, #C8E6C9); /* Fondo suave */
+    min-height: 100vh;
+}
+
+.ct {
+    max-width: 1350px;
+    margin: 0 auto;
+    padding: 8px;
+}
+
+/* Header general */
+.hd {
+    background: #fff;
+    padding: 12px 20px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Espacio reservado para el logo del cliente */
+.logo-placeholder {
+    width: 36px;
+    height: 36px;
+    background: #2E7D32;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.logo h1 {
+    color: #2E7D32; /* Verde Bosque */
+    font-size: 1.6em;
+    font-weight: 700;
+}
+
+/* Botones de acción (Logout) */
+.rb {
+    padding: 8px 15px;
+    border: 1px solid #2E7D32;
+    background: #fff;
+    color: #2E7D32;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: .85em;
+    transition: all 0.3s;
+    /* Sombra profesional */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.rb:hover {
+    background: #2E7D32;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Contenido Principal (Sidebar + Main) */
+.mn {
+    display: flex;
+    gap: 15px;
+    min-height: 80vh;
+}
+
+/* Sidebar (Menú de Navegación) */
+.sb {
+    width: 200px;
+    background: #fff;
+    border-radius: 12px;
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.sb .it {
+    padding: 12px 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #333;
+    font-weight: 500;
+    font-size: .9em;
+    transition: background 0.2s, color 0.2s;
+}
+
+.sb .it:hover, .sb .it.a {
+    background: #E8F5E9; /* Fondo muy claro */
+    color: #1B5E20; /* Verde oscuro para resaltar */
+    border-right: 4px solid #4CAF50;
+}
+
+.sb .it .material-icons {
+    font-size: 20px;
+}
+
+/* Área de Contenido Principal */
+.cn {
+    flex: 1;
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.cn h2 {
+    color: #1B5E20;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    font-weight: 500;
+    border-bottom: 1px solid #EEE;
+    padding-bottom: 10px;
+}
+
+/* Tarjetas (Métricas) */
+.tcds {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.cd {
+    background: #4CAF50; /* Verde base */
+    color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cd h3 {
+    font-size: 1em;
+    font-weight: 400;
+    opacity: 0.8;
+}
+
+.cd p {
+    font-size: 2em;
+    font-weight: 700;
+    margin-top: 5px;
+}
+
+/* Estilos de módulos/listas de datos */
+.mds, .bx {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.md {
+    background: #F9F9F9;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 5px solid #E0E0E0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    transition: border-left 0.3s;
+}
+
+.md.c { border-left-color: #4CAF50; /* Verde: Completado/Operativa */ }
+.md.p { border-left-color: #FF9800; /* Naranja: En Progreso/Construcción */ }
+.md.g { border-left-color: #757575; /* Gris: Pendiente/Planificación */ }
+
+.md-txt {
+    flex: 1;
+}
+
+.md-txt h4 {
+    font-size: 1em;
+    color: #333;
+    font-weight: 500;
+}
+
+.md-txt p {
+    font-size: 0.8em;
+    color: #777;
+    margin-top: 2px;
+}
+
+.prg {
+    width: 150px;
+}
+
+.prg-bar {
+    height: 8px;
+    background: #E0E0E0;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-top: 4px;
+}
+
+.prg-fill {
+    height: 100%;
+    background: #4CAF50;
+    transition: width 0.5s;
+}
+
+/* Botón principal (General) */
+.bt {
+    padding: 8px 15px;
+    border: none;
+    background: #2E7D32;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: .85em;
+    transition: background 0.3s, box-shadow 0.3s;
+    /* Sombra profesional */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.bt:hover {
+    background: #1B5E20;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos de Formularios (Login y Anotaciones) */
+.fm, .fg {
+    margin-bottom: 15px;
+}
+
+.fg label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #444;
+}
+
+.fg input, .fg textarea, .fg select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+.fg input:focus, .fg textarea:focus, .fg select:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* Estilos de la Lista de Granjas (Asesor) */
+.g-it {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    transition: box-shadow 0.2s;
+}
+
+.g-it:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.st-ind {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.st-ind.op { background: #4CAF50; } /* Operativa */
+.st-ind.cn { background: #FF9800; } /* En Construcción */
+.st-ind.pl { background: #F44336; } /* Planificación */
+
+/* Mapa SIG (Simulado) */
+.map-sig {
+    height: 300px;
+    background: url('https://placehold.co/800x300/e0f2f1/000?text=Mapa+SIG+Simulado\n(7+Granjas)') no-repeat center center;
+    background-size: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #2E7D32;
+    font-size: 1.5em;
+    font-weight: 700;
+    border: 2px solid #B2DFDB;
+}
+
+/* Estilos de Alertas y Mensajes (Para Offline-First) */
+.al {
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+    font-weight: 500;
+    display: none; /* Oculto por defecto */
+}
+
+.al.success { background: #D4EDDA; color: #155724; border: 1px solid #C3E6CB; }
+.al.warning { background: #FFF3CD; color: #856404; border: 1px solid #FFEEDB; }
+.al.error { background: #F8D7DA; color: #721C24; border: 1px solid #F5C6CB; }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .mn {
+        flex-direction: column;
+    }
+    .sb {
+        width: 100%;
+        padding: 0;
+    }
+    .sb nav {
+        display: flex;
+        overflow-x: auto;
+        padding: 10px 0;
+    }
+    .sb .it {
+        flex-shrink: 0;
+        border-right: none;
+        border-bottom: 3px solid transparent;
+        padding: 10px 15px;
+    }
+    .sb .it.a {
+        border-bottom: 3px solid #4CAF50;
+    }
+    .cn {
+        padding: 15px;
+    }
+ }
+/* Estilo para el Contenedor del Mensaje Flotante */
+#pwa-status-toast {
+    position: fixed; /* Lo fija en la pantalla */
+    top: 20px;
+    right: 20px;
+    background-color: #07470a; /* Verde de tu logo */
+    color: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Asegura que esté sobre otros elementos */
+    /* Animación para que aparezca y desaparezca */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+    transform: translateY(-20px);
+    font-family: Arial, sans-serif;
+    max-width: 250px;
+}
+
+/* Clase para mostrar el mensaje */
+#pwa-status-toast.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
